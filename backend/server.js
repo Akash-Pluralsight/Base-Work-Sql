@@ -44,8 +44,18 @@ const executeSql = async () => {
         console.error('Error executing SQL:', error);
     }
 };
-// cron.schedule('*/5 * * * *', () => {
-//     executeSql().catch(error => console.error('Error in cron job:', error));
+// 
+
+// app.post('/schedule', (req, res) => {
+//     const { schedule } = req.body;
+//     if (!schedule) {
+//         return res.status(400).send('Schedule time is required');
+//     }
+//     cron.schedule(schedule, () => {
+//         //executeSql().catch(error => console.error('Error in cron job:', error));
+//         console.log("cron running");
+//     });
+//     res.send('Task scheduled successfully');
 // });
 
 
